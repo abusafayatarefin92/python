@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}
+Register Page
+{% endblock %}
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register" style="color:white">
+            {{ form.hidden_tag() }}
+            <img src="https://cdn.pixabay.com/photo/2020/06/01/22/23/eye-5248678_960_720.jpg" class="mb-4" alt="image">
+            <h1 class="h3 mb-3 font-weight-normal">Please Create Your Account</h1>
+            <br>
+            {{ form.username.label() }}
+            {{ form.username(class='form-control', placeholder='User Name') }}
+
+            {{ form.email_address.label() }}
+            {{ form.email_address(class='form-control', placeholder='Email Address') }}
+
+            {{ form.password.label() }}
+            {{ form.password(class='form-control', placeholder='Password') }}
+
+            {{ form.re_password.label() }}
+            {{ form.re_password(class='form-control', placeholder='Re-enter Password') }}
+            <br>
+            {{ form.submit(class='btn btn-lg btn-block btn-primary') }}
+        </form>
+    </div>
+</body>
+{% endblock %}
